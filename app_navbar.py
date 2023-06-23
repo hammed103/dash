@@ -4,7 +4,12 @@ import altair as alt
 
 import streamlit as st
 
-
+st.set_page_config(  # Alternate names: setup_page, page, layout
+	layout="wide",  # Can be "centered" or "wide". In the future also "dashboard", etc.
+	initial_sidebar_state="auto",  # Can be "auto", "expanded", "collapsed"
+	page_title=None,  # String or None. Strings get appended with "• Streamlit". 
+	page_icon=None,  # String, anything supported by st.image, or None.
+)
 
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
