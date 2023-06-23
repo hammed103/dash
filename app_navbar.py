@@ -3,7 +3,7 @@ import pandas as pd
 import altair as alt
 import millify
 import streamlit as st
-from millify import millify
+#from millify import millify
 
 
 
@@ -82,7 +82,7 @@ for i, column in enumerate(df.columns[1:-2]):
 
     # Create a metrics price box
     if i%8 == 0 :
-      col1.metric(column, millify(latest_price,precision=2),prev_price)
+      col1.metric(column, latest_price,prev_price)
     elif i%8 == 1 :
       col2.metric(column, latest_price,prev_price)
     elif i%8 == 2 :
