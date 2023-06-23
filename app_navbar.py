@@ -25,7 +25,7 @@ year_range = st.slider(label="Compare With", min_value=mini, max_value=maxi, val
 
 st.header('**Selected Artists**')
 
-df = df[df.Date.isin(year_range)]
+df = df[(df.Date > year_range[0] )& (df.Date < year_range[1])]
 
 #df = df.iloc[:,1:]
 #df = df.set_index("Date")
@@ -61,7 +61,7 @@ with st.sidebar:
 
 df = df[df.Country == source]
 df = df.groupby(['Date','ArtistName',"Country"]).sum().sort_values(['Date',"ArtistName","Country"],ascending=False)
-df = df.rename_axis(["Date","ArtistName","Country"])
+#df = df.rename_axis(["Date","ArtistName","Country"])
 variable_dict = {}
 
 
