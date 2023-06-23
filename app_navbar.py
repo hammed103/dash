@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-import millify
+#import millify
 import streamlit as st
 #from millify import millify
 
