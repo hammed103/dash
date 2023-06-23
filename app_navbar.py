@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-#import millify
+import millify
 import streamlit as st
-#from millify import millify
+from millify import millify
 
 
 
@@ -75,7 +75,7 @@ variable_dict = {}
 
 # Calculate latest price change and price change percentage for each selected series
 for i, column in enumerate(df.columns[1:-2]):
-    latest_price = round(df[column].sum(),0)
+    latest_price = millify(round(df[column].sum(),0),precision=2)
     prev_price = df[column].iloc[0]
     price_change = latest_price - prev_price
     prev_price = round((price_change / prev_price) * 100,2)
