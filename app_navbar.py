@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
+import streamlit as st
+
+# Specify the path to the config file
+st.set_option('config.file', 'config.toml')
 
 st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
