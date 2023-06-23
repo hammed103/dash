@@ -75,10 +75,11 @@ variable_dict = {}
 
 # Calculate latest price change and price change percentage for each selected series
 for i, column in enumerate(df.columns[1:-2]):
-    latest_price = millify(round(df[column].sum(),0),precision=2)
+    latest_price = round(df[column].sum(),0)
     prev_price = df[column].iloc[0]
     price_change = latest_price - prev_price
     prev_price = round((price_change / prev_price) * 100,2)
+    latest_price = millify(latest_price)
 
     # Create a metrics price box
     if i%8 == 0 :
