@@ -19,3 +19,8 @@ with st.expander("Total No of Listeners"):
     
 #st.bar_chart(data=df, x='Month', y='listeners')
 st.write(df)
+
+
+st.bar_chart(data=df, x='Month', y='listeners')
+
+st.bar_chart(data=df, y='Country', x='listeners')
