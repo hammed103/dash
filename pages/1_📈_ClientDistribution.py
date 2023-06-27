@@ -1,5 +1,11 @@
 import pandas as pd
+import altair as alt
+import millify
 import streamlit as st
+import seaborn as sns
+import matplotlib.pyplot as plt
+from millify import millify
+import time
 
 
 st.write('Welcome to the Listener Page')
@@ -12,8 +18,10 @@ def data_df():
     return df
 
 df = data_df()
-Total = df['listeners'].sum()
 
-with st.expander("Total No of Listeners"):
-    st.write(Total, 'listners')
+
+st.header("Number of Listeners Per Artist")
+fig, ax = plt.subplots()
+sns.barplot(data=df, y="ArtistName", x="listeners", ax=ax)
+st.pyplot(fig)
 
