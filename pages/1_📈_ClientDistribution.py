@@ -12,7 +12,7 @@ st.write('Welcome to the Listener Page')
 
 @st.cache_data
 def data_df():
-    df= pd.read_csv('C:/Users/Techa/streamlitdemo/dash/concat.csv')
+    df= pd.read_csv('\streamlit_navbar-main\concat.csv')
     df['Date'] = pd.to_datetime(df['Date'])
     df['Month']= df['Date'].dt.month
     return df
