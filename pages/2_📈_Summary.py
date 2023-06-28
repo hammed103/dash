@@ -11,7 +11,7 @@ import time
 
 @st.cache_data
 def data_df():
-    df= pd.read_csv('C:/Users/Techa/streamlitdemo/dash/concat.csv')
+    df= pd.read_csv('concat.csv')
     df['Date'] = pd.to_datetime(df['Date'])
     df['Month']= df['Date'].dt.month
     return df
